@@ -1,0 +1,328 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper,11pt,oneside]{article}
+\usepackage[a4paper,vmargin={1.5cm,1.5cm},width=16cm]{geometry}
+\usepackage[style=verbose-inote,doi=false,sortcites=true,block=space, backend=bibtex]{biblatex}
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage[spanish]{babel}
+\usepackage{microtype}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+\usepackage{eurosym}
+\usepackage{mathptmx}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+%% Added to help mimic structure.
+\usepackage[many]{tcolorbox}
+\usepackage{soul}
+\usepackage{color}
+\usepackage{lastpage}
+%\usepackage[skins]{tcolorbox}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% HEADERS
+%\setlength{\headheight}{1cm}
+%\setlength{\headsep}{0.5cm}
+%\pagestyle{fancyplain}
+%\fancyhf{}
+%\lhead{\fancyplain{}{\sc Memoria científico técnica de proyectos coordinados}}
+%\rhead{\fancyplain{}{\sc Parte A}}
+%\cfoot{\thepage}
+%\renewcommand{\headrulewidth}{0pt} % remove lines
+%\renewcommand{\footrulewidth}{0pt}
+
+
+%%% HEADER
+\setlength{\headheight}{1cm}
+%\setlength{\headwidth}{20cm}
+\setlength{\headsep}{0.5cm}
+\pagestyle{fancyplain}
+\fancyheadoffset[HR,HL]{2cm}
+\fancyhf{}
+\lhead{\raisebox{-0.4\height}{\includegraphics[height=0.9cm,keepaspectratio=true]{img/miniLogo}}}
+\rhead{\fancyplain{}{\fontsize{10}{12} \selectfont \textbf{\underline{Memoria científico técnica de proyectos coordinados}}}}
+\cfoot{\thepage\, / parte A}
+\renewcommand{\headrulewidth}{0pt} % remove lines
+\renewcommand{\footrulewidth}{0pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Hack to make math formulas bold in section titles
+\makeatletter
+\DeclareRobustCommand*{\bfseries}{%
+  \not@math@alphabet\bfseries\mathbf
+  \fontseries\bfdefault\selectfont
+  \boldmath
+}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\thesection{\bf \textsf{\Alph{section}}}
+
+%\nobibliography{biblio}
+%\bibliographystyle{JHEP}
+
+\bibliography{biblio}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%% Some useful definitions
+\input{src/Commands.tex}
+
+%% Heading
+\begin{tcolorbox}[colback=white,arc=0pt,outer arc=0pt,colframe=black,boxrule=0.6pt]
+\begin{center}
+Convocatorias 2016\\ 
+Proyectos Excelencia y Proyectos RETOS \\ 
+Dirección General de Investigación Científica y Técnica \\
+Subdirección General de Proyectos de Investigación
+\end{center} 
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=yellow,arc=0pt,outer arc=0pt,colframe=black,boxrule=0.6pt,left=0mm,right=0mm]
+  \begin{center}
+    AVISO IMPORTANTE\\
+  \end{center}
+    En virtud del art\'iculo 11 de la convocatoria \ul{\textbf{NO SE ACEPTAR\'AN NI SER\'AN SUBSABABLES MEMORIAS CIENT\'IFICO-T\'ECNICAS}} que no se presenten en este formato.
+     \\
+    \textbf{La parte C no podrá exceder 25 p\'aginas.}
+    \\
+    \\
+    \textbf{Lea detenidamente las instrucciones para rellenar correctamente esta memoria disponibles en la web de la convocatoria .}
+    \\
+  %\end{center}
+\end{tcolorbox}
+\vspace{3pt}
+\begin{tcolorbox}[colback=yellow,arc=0pt,outer arc=0pt,colframe=black,boxrule=0.6pt,left=0mm]
+  \noindent\textbf{Parte A: RESUMEN DE LA PROPUESTA/SUMMARY OF THE PROPOSAL}
+  %\section{RESUMEN DE LA PROPUESTA/SUMMARY OF THE PROPOSAL}
+\end{tcolorbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{RESUMEN DE LA PROPUESTA/SUMMARY OF THE PROPOSAL}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\subsection{DATOS DEL PROYECTO COORDINADO}
+\noindent\textbf{A.1. DATOS DEL PROYECTO COORDINADO}
+\vspace{6pt}
+
+\noindent\textbf{INVESTIGADOR COORDINADOR PRINCIPAL 1:} (Nombre y apellidos)
+
+\noindent José Díaz Medina.
+\vspace{6pt}
+
+\noindent\textbf{INVESTIGADOR COORDINADOR PRINCIPAL 2:} (Nombre y apellidos)
+
+\noindent 
+\vspace{6pt}
+
+\noindent\textbf{TÍTULO GENERAL DEL PROYECTO COORDINADO:} Desarrollo de un nuevo tipo de aparato PET de alta sensibilidad basado en el xenón líquido
+\vspace{6pt}
+
+\noindent\textbf{ACRÓNIMO DEL PROYECTO COORDINADO:} PETALO.
+
+
+\noindent\textbf{RESUMEN DEL PROYECTO COORDINADO} 
+{\color{blue}{M\'aximo 3500 caracteres (incluyendo espacios en blanco):}}
+\vspace{12pt}
+
+\input{src/Resumen.tex}
+ 
+\vspace{12pt}
+
+\noindent\textbf{PALABRAS CLAVE DEL PROYECTO COORDINADO:} PET, xenón líquido, TOF, SiPM, centelleo, alta sensibilidad.
+
+\vspace{12pt}
+
+\noindent\textbf{TITLE OF THE COORDINATED PROJECT:} Development of a new PET scanner of high sensitivity based on liquid xenon 
+\vspace{6pt}
+
+\noindent\textbf{ACRONYM OF THE COORDINATED PROJECT:} PETALO.
+\vspace{6pt}
+
+\noindent\textbf{SUMMARY OF THE COORDINATED PROJECT} 
+\vspace{6pt}
+
+\input{src/Summary.tex}
+
+ \vspace{12pt}
+
+\noindent\textbf{KEYWORDS OF THE COORDINATED PROJECT:} PET, scintillation, liquid xenon, SiPMs, high sensitivity, TOF.
+
+ \vspace{12pt}
+%\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent\textbf{A.2. DATOS DE LOS SUBPROYECTOS/ DATA OF SUBPROJECTS }
+ \vspace{12pt}
+ 
+\noindent\textbf{SUBPROYECTO 1 / SUBPROJECT 1} (el investigador o investigadores principales son los coordinadores del proyecto coordinado)
+
+\vspace{6pt}
+\noindent\textbf{TÍTULO / TITLE :} PETALO-DETECTOR (PETALO-DET)
+
+ \vspace{12pt}
+ 
+\noindent\textbf{SUBPROYECTO 2 / SUBPROJECT 2}
+\vspace{6pt}
+
+\noindent\textbf{INVESTIGADOR PRINCIPAL 1 / PRINCIPAL RESEARCHER 1 } (nombre y apellidos)
+
+\vspace{6pt}
+\noindent Vicente Herrero Bosch
+
+\vspace{12pt}
+\noindent\textbf{INVESTIGADOR PRINCIPAL 2 / PRINCIPAL RESEARCHER 2} (nombre y apellidos)
+
+\vspace{6pt}
+Rafael Gadea Gironés
+
+
+\vspace{6pt}
+\noindent\textbf{TÍTULO / TITLE :} Electronics and DAQ for PETALO (ASIC)
+
+\vspace{12pt}
+\noindent\textbf{SUBPROYECTO 3 / SUBPROJECT 3}
+\vspace{6pt}
+
+\noindent\textbf{INVESTIGADOR PRINCIPAL 1 / PRINCIPAL RESEARCHER 1 } (nombre y apellidos)
+
+\vspace{6pt}
+\noindent Irene Torres Espallardó
+
+\vspace{6pt}
+\noindent\textbf{TÍTULO / TITLE :} Imaging for PETALO (IMG)
+
+
+%\rhead{\fancyplain{}{\sc Parte B}}
+%\newpage
+%\setcounter{page}{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\setcounter{page}{1}
+\cfoot{\fancyplain{}{\thepage\, / parte B}}
+
+%\section{INFORMACIÓN ESPECÍFICA DEL EQUIPO / TEAM INFORMATION}
+
+\begin{tcolorbox}[colback=yellow,arc=0pt,outer arc=0pt,colframe=black,boxrule=0.6pt,left=0mm]
+  \noindent\textbf{PARTE B: INFORMACIÓN ESPECÍFICA DEL EQUIPO / TEAM INFORMATION}
+  %\section{RESUMEN DE LA PROPUESTA/SUMMARY OF THE PROPOSAL}
+\end{tcolorbox}
+
+\vspace{12pt}
+\noindent\textbf{B.1 RELACIÓN DE LAS PERSONAS NO DOCTORES QUE COMPONEN EL EQUIPO DE TRABAJO / WORKING TEAM (MEMBERS WITHOUT PH.D) }
+%\input{src/RelacionNoDoctores.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\subsection{\label{subsec:Grants}FINANCIACIÓN PÚBLICA Y PRIVADA (PROYECTOS Y/O CONTRATOS DE I+D+I) DEL EQUIPO DE INVESTIGACIÓN / FUNDING OF RESEARCH TEAM}
+
+\noindent\textbf{B.2 FINANCIACIÓN PÚBLICA Y PRIVADA (PROYECTOS Y/O CONTRATOS DE I+D+I) DEL EQUIPO DE INVESTIGACIÓN / FUNDING OF RESEARCH TEAM}
+\vspace{12pt}
+
+%\input{src/GrantsDET2.tex}
+%\input{src/GrantsAsic2.tex}
+%\input{src/GrantsIMG.tex}
+
+\newpage
+\setcounter{page}{1}
+\cfoot{\fancyplain{}{\thepage\, de \pageref{LastPage} / parte C}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{DOCUMENTO CIENTÍFICO / SCIENTIFIC DOCUMENT}
+
+\begin{tcolorbox}[colback=yellow,arc=0pt,outer arc=0pt,colframe=black,boxrule=0.6pt,left=0mm]
+  \noindent\textbf{Parte C: DOCUMENTO CIENTÍFICO / SCIENTIFIC DOCUMENT: Máximo 25 páginas}
+  %\section{RESUMEN DE LA PROPUESTA/SUMMARY OF THE PROPOSAL}
+\end{tcolorbox}
+
+\vspace{12pt}
+
+\noindent\textbf{C.1. JUSTIFICACIÓN DE LA COORDINACIÓN / JUSTIFICATION OF THE COORDINATION}
+\vspace{12pt}
+
+%\input{src/Coordination.tex}
+
+\vspace{12pt}
+
+\noindent\textbf{C.2. PROPUESTA CIENTÍFICA / SCIENTIFIC PROPOSAL}
+
+\subsection*{\label{subsubsec:stateoftheart}Estado actual y antecedentes /  State-of-the-art and previous work}
+
+\input{src/StateOfTheArt.tex}
+%\input{src/PreviousWork.tex}
+
+\subsubsection*{Objetivos generales y adecuación al Programa Estatal de I+D+i orientada a los Retos de la Sociedad / General objectives and match to the National Programme for research aimed at the Challenges of Society}
+
+%\input{src/Objectives.tex}
+%\input{src2/RETO6.tex}
+
+\subsubsection*{Objetivos específicos / Specific objectives}
+%
+
+%\input{src/ObjDet.tex}
+%\input{src/ObjAsic.tex}
+%\input{src/ObjImg.tex}
+
+\subsubsection*{Metodolog\'ia / Methodology}
+
+%4. El detalle de la metodologia propuesta en cada uno de los subproyectos participantes
+%\input{src/Methodology.tex}
+%\input{src/MetodologyDET.tex} 
+%\input{src/MetodologyASIC.tex}
+%\input{src/MetodologyIMG.tex} 
+
+\subsubsection*{Infraestructuras, equipamientos y propuesta de co-financiaci\'on (equpamientos y fungible) / Infrastructures, equipment and co-funding request (equipment and fungible)}
+
+%5. La descripción de los medios materiales, infraestructuras y equipamientos singulares a disposición de los participantes que permitan abordar la metodología propuesta.
+%\input{src/InfraIFIC.tex}
+%\input{src/InfraUPV.tex}
+%\input{src/InfraLaFe.tex}
+
+\subsubsection*{Cronograma / Timetable}
+
+%\input{src/Crono.tex}
+%\input{src2/BataSchedule.tex}
+
+\subsubsection*{Personal / Personnel}
+
+%7. Si se solicita ayuda para la contratación de personal, justificación de su necesidad y descripción de las tareas que vaya a desarrollar.
+%\input{src/Personnel.tex}
+
+\vspace{12pt}
+
+\noindent\textbf{C.3. IMPACTO ESPERADO DE LOS RESULTADOS / EXPECTED IMPACT}
+
+%\input{src/Impact.tex}
+
+\vspace{12pt}
+
+\noindent\textbf{C.4. CAPACIDAD FORMATIVA DEL EQUIPO / TRAINING CAPABILITIES OF THE GROUP}
+%\input{src/Training.tex}
+
+%Este apartado solo se rellenará si alguno de los subproyectos participantes solicita la inclusión del proyecto en la convocatoria de “Contratos predoctorales para la formación de doctores”. Dicha inclusión solo será posible en un número limitado de los proyectos aprobados.
+%
+%Para evaluar la capacidad formativa del equipo solicitante, se recomienda incluir:
+%
+%1. El plan de formación previsto.
+%
+%2. Relación de tesis realizadas o en curso (últimos 10 años) con indicación del subproyecto, nombre del doctorando, el título de tesis y la fecha de obtención del grado de doctor o de la fecha prevista de lectura de tesis.
+%
+%3. Breve descripción del desarrollo científico o profesional de los doctores egresados de los equipos de investigación de los subproyectos participantes.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{12pt}
+
+\noindent\textbf{C.5. IMPLICACIONES ÉTICAS Y/O DE BIOSEGURIDAD/ETHICS AND SAFETY IMPLICATIONS}
+
+%\input{src/Ethical.tex}
+
+\end{document}
+
