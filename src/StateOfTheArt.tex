@@ -12,7 +12,7 @@ are injected into the patient prior to the scan. The emitted positrons slow down
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[scale=0.5]{img/LysoSegmented.png}
-	\includegraphics[scale=0.5]{img/LysoMono.png}
+	\includegraphics[scale=0.6]{img/LysoMono.png}
 	\caption{\label{fig.lyso} LYSO crystals. Left: segmented; right: monolithic.  }
 \end{figure}
 
@@ -95,7 +95,12 @@ The possibility of building a LXe PET based on the excellent properties of LXe a
 \subsubsection*{PETALO}
 
 
-
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[scale=0.20]{img/Box_2faces_1.jpg}
+	\includegraphics[scale=0.20]{img/Box_2faces_3.jpg}
+	\caption{The LXSC2 instruments the entry and exit faces of the box (relative to the photon line of flight) with silicon photomultipliers (SiPMs), which can be eventually coated with TPB. The non-instrumented faces are covered by reflecting Teflon (optionally also coated with TPB).}\label{fig.box} 
+\end{figure}
 %\begin{figure}[!htbp]
 %	\centering
 %	\includegraphics[scale=0.6]{../img/LXSC2.pdf}
@@ -154,11 +159,17 @@ shifted to $\sim$ 430 nm (figure \ref{fig.tpb}) and re-emitted isotropically. Th
 \subsubsection*{PETALO as a PET-TOF scanner}
 The potential of PETALO as a a PET-TOF scanner has been recently studied \footcite{PetaloTOF}. The scintillation in xenon is parameterised in terms of two decay constants:
 
+ \begin{figure}[!bhtp]
+	\centering
+	\includegraphics[scale=0.40]{img/lxe_noCher_avg_npe_phys.png}
+	\caption{\label{fig.crt_avg_LXe} CRT as a function of the number of photoelectrons used to compute $\Delta t$, for LXe. The CRT is shown for several values of the PDE.}
+\end{figure}
+
 \begin{equation}
 I(t) = N_\gamma (0.07 \times \frac{e^{-t/\tau_1}}{\tau_1} + 0.93 \times \frac{e^{-t/\tau_2}}{\tau_2})
 \label{eq.scint}
 \end{equation}
-where $\tau_1 = 2.2$~ns and $\tau_2 = 27$~ns. Thus, xenon scintillation is not only more copious (by a factor two) but also much faster than scintillation in LYSO. Using VUV-sensitive SiPMs a CRT of 70 ps is found for a PDE of 20 \% (80 ps for a PDE of 15\%). Using conventional SiPMs coated with TPB, the CRT varies between 130 and 155 ps, depending on the (poorly known) value of the TPB decay constant. This results show the
+where $\tau_1 = 2.2$~ns and $\tau_2 = 27$~ns. Thus, xenon scintillation is not only more copious (by a factor two) but also much faster than scintillation in LYSO. Using VUV-sensitive SiPMs a CRT of 70 ps is found for a PDE of 20 \% (80 ps for a PDE of 15\%, see figure \ref{fig.crt_avg_LXe}). Using conventional SiPMs coated with TPB, the CRT varies between 130 and 155 ps, depending on the (poorly known) value of the TPB decay constant. This results show the
 potential of the PETALO concept as a PET-TOF scanner.  
 
 \subsubsection*{Resolving Compton interactions:}
@@ -179,7 +190,7 @@ An important advantage of the LXSC2 is that multiple-site hits can be identified
 %
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[scale=0.8]{img/RelativeSensitivity.png}
+	\includegraphics[scale=0.6]{img/RelativeSensitivity.png}
 	\caption{\label{fig.rsensi} Relative sensitivity of a PETALO-TOF-FBP scanner w.r.t the the current top-end PET-TOF scanner, the GEMINI of Philips as a function of the relative CTR.  }
 \end{figure}
 
@@ -187,7 +198,7 @@ An important advantage of the LXSC2 is that multiple-site hits can be identified
 A major application of the PETALO concept would be the construction of a ``Full Body PET'' (FBP), of axial dimensions in the range of 70-100 cm, exploiting the low cost and the excellent performance offered by LXe. In addition to the superb energy resolution and spatial resolution a PETALO--FBP scanner would offer a much increased sensitivity w.r.t. conventional PET devices. To illustrate this point, we combine equations \ref{eq.sensi} and \ref{eq.sensiTOF} to write the relative sensitivity of two PET scanners, $p_1,p_2$~ having the same bore and scanning a patient of the same dimensions as:
 
 \begin{equation}
-S(p_1,p_2) = \frac{L_1} {L_2}\frac{CTR_1} {CTR_2}\frac{\epsilon_1} {\epsilon_2}frac{e^{-\mu_1 t_1}} {e^{-\mu_2 t_2}}
+S(p_1,p_2) = \frac{L_1} {L_2}\frac{CTR_1} {CTR_2}\frac{\epsilon_1} {\epsilon_2}\frac{e^{-\mu_1 t_1}} {e^{-\mu_2 t_2}}
 \label{eq.srel}
 \end{equation}
 %
