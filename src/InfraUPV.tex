@@ -1,0 +1,58 @@
+\subsubsection*{Subproject ASIC}
+
+The I3M-UPV research team has full access through Europractice to professional ASIC design tools. Cadence Design Systems tool framework has been chosen for mixed signal microelectronics developments due to its compatibility with most of the available design kits provided by silicon foundries. It integrates both digital and analog design flows from high abstraction level descriptions (HDL code) to schematics design entry (preferred in Analog designs) and final layout integration. Along with design tools, Cadence offers high-end simulation (Spectre, AMS), physical processing and verification (ASSURA) tools. Thus the whole design flow can be covered inside the same environment using the simulation and parasitics extraction models included in the selected technology process design kit. The mandatory non-disclosure agreements (NDA) have already been signed in order to obtain access to Austria MicroSystems Foundry Services for 0.35 um and 0.18 um processes. Those are one of the most common technologies being used nowadays for the kind of ASICs being proposed in this project.
+
+\par High performance computing hardware is available to develop the design, simulation and verification tasks associated to microelectronics developments:
+\begin{itemize}
+ \item 2 Fujitsu RX200S8 (64 GB de RAM, Xeon E52660V2 x2) workstations in a rack installation inside I3M computing center.
+ \item 1 Fujitsu Eternus Disk Vault acting as centralized disk space server (6 TB / RAID 5).
+\end{itemize}
+
+\par I3M-UPV group can also contribute with electronics laboratory equipment in order to build a test bench for test and characterisation of the dice boards (e.g, SiPMs). The equipment includes
+\begin{itemize}
+ \item Keithley 2230-30-1 Programmable Low noise Power Supply with 3 individual outputs.
+ \item Lecroy WaveSurfer 104MXs-B (10GS/s) 4 channel oscilloscope for high bandwidth measurements
+ \item 4 LXI ZTEC Oscilloscopes (150 MHz / 16 Channels) for general test and characterisation
+ \item Fluke Ti125 9Hz Thermographic Camera for thermal reliability measurements.
+ \item SMD soldering facilities with high resolution camera display for prototype PCB handling.
+\end{itemize}
+
+\subsubsection*{Co-funding proposal}
+Funding is requested for manufacturing the SiPM dice boards for P2 and PEP, as well as for acquiring the PETSYS
+electronics. 
+
+P2 will deploy 2 LXSC2-A (two DB per cell of regular SiPMs coated with TPB) and 2 LXSC2-B (two DB per cell of VUV SiPMs). PEP will deploy 14 LXSC-A (one DB per cell). Thus, 18 DBs-A (6 mm regular SiPMs coated with TPB) and 4 DBs-B (3 mm VUV-sensitive SiPMs) will be manufactured. The cost of 6 mm SiPMs for relatively large quantities varies between 15 and 25 \euro, depending of the manufacturer. We estimate 20 \euro ~per SiPM and thus 1,280 \euro 
+~per DB-A. The cost of 3 mm VUV-sensitive SiPMs is around 100 \euro (there are only two suppliers, FBK and Hamamatsu), thus the cost of each DB-B is 6,400 \euro. The cost of 18 DB-A is 23,040 \euro\ and the cost
+of 4 DB-B is 25,600 \euro. In spite of the high cost of VUV sensitive SiPMs, they could improve by 50\% the best existing CRT measurements. Demonstrating a CRT below 100 ps would, in turn contribute to lower the costs of the devices, vis-a-vis the obvious commercial application.
+
+The measurements with P2 require 2 FEB-A (a single FEB-A handles the 128 channels of one LXSC2 cell). PEP requires 7 FEB-A (one FEB-A handles 2 LXSC of 64 channels in PEP). Providing for 3 spares, a total of 12 FEB-A is foreseen. Each FEB-A costs 1248 \euro\ for the current v1 of PETSYS. We foresee a modest increase for v2 and assume a cost of 1300 \euro\ per FEB-A, for a total of 15,600 \euro. A single FEB-D module can handle 8 FEB-A. We assume that P2 and PEP will not operate simultaneously and thus foresee a single module, at a cost of 5,500 \euro (assuming a modest increment over current prices for v1, which are 5376 \euro). Finally, the DAQ module costs 16,000 \euro.
+
+Slow controls will use a Compact RIO scheme, closely following the model develop for NEXT-100. We estimate the cost of the Slow Controls in 10,000 \euro. In addition 4 PCs are needed (two for SC and two for DAQ), at a total estimated cost of 8,000 \euro. 
+
+The total costs are detailed in Table \ref{tab.costs.asic}.
+
+\begin{table}[htp!]
+\caption{Co-funding request (ASIC subproject)}
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+item & cost (in \euro) \\
+\hline
+DB-A (18) &	23,040 \\
+DB-B (4) &	25,600 \\
+FEB-A (12)  & 15,600 \\
+FEB-D (1) & 5,500 \\
+DAQ module (1) &	16,000 \\
+\hline
+Total FEE \& DAQ &	85,740 \\
+\hline
+Slow Controls & 10,000 \\
+\hline	
+PCs (DAQ + SC) &	8,000 \\
+\hline
+Total ASIC &	103,740 \\
+\hline
+\end{tabular}
+\end{center}
+\label{tab.costs.asic}
+\end{table}%

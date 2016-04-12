@@ -1,0 +1,70 @@
+\subsubsection*{Methodology of the IMG subproject}
+
+%
+%\begin{figure}[!htb]
+%	\centering
+%	\includegraphics[scale=0.5]{img/ImgWF.png}
+%	\caption{\label{fig.ImgWF} Work flow for the activities of the IMG subproject.  }
+%\end{figure}
+
+\subsubsection*{Imaging algorithms}
+
+The first stage to produce imaging in a PET scanner is to establish lines or response or LORs, connecting pairs of back-to-back photons within the same time window. Starting from the LORs, 2D and 3D algorithms can be applied to obtain images. 
+
+The IMG project is in charge of developing 2D (filtered backprojection, maximum-likelihood expectation maximization methods) and 3D (e.g, ED-RAMLA) algorithms for image reconstruction. The algorithms will be first tested using simulation data of PEP (as well as of a full-body PETALO scanner) provided by SIMPLE, then will be applied to the data acquired by PEP. 
+
+%The IMG group will also implement correction algorithms (e.g, photon attenuation, scattering correction, etc.). 
+
+The IMG group will define and procure the test set needed for imaging (e.g, head phantoms) and will assess the performance of PETALO imaging comparing the results obtained with PEP with the corresponding PEP simulation, then extrapolating (using simulation) to a full body PEP scanner.  
+
+\subsubsection*{Imaging analysis}
+The end result of a PET acquisition and image reconstruction is a 3D image volume where each individual voxel (volume element) represents the regional tissue radioactivity concentration. The IMG group will be in charge of preparing the data visualisation (e.g, the most common display format for brain scan is to show transaxial sections). The IMG subproject will be also in charge of the precise calibration of the device (e.g, the accurate determination of the activity concentration of the radioactracer within a given volume). Calibration is essential to convert the image count density into an activity concentration that allows, for example, the classification of a lesion in terms of its metabolic rate. Calibration will be performed with the aid of phantoms of known activity concentration. The phantom data will then be corrected for
+attenuation, scatter, etc., and reconstructed using the same algorithms and parameters intended for clinical studies. 
+
+In addition the IMG group will develop tools such as image segmentation (an analysis tool that classifies pixel elements into regions of classes that are homogenous with respect to one or more characteristics), image registration (a process in which image volumes are realigned into a common anatomical coordinate space), etc. 
+
+\subsubsection*{TOF imaging}
+
+The Maximum Likelihood Estimation Maximization
+(MLEM) method fallows the possibility to include
+Time-Of-Flight (TOF) information\footnote{Groiselle C J and Glick S J (2004): 3D PET list-mode iterative reconstruction using time-of-flight
+information. IEEE Nucl. Sci. Symp. Conf. Record 2633-2638.}. The improvement in image quality achieved by TOF-MLEM reconstruction compared with standard MLEM for PET strongly depends
+on the time resolution of the scanner. The IMG group (in collaboration with the DET group) will develop the TOF-MLEM reconstruction jointly to take advantage of the excellent CRT resolution expected for PETALO ($\sim 100-150$~ps), which would be, if confirmed, the best in the market. 
+
+\subsubsection*{Study and modelling of image degradation phenomena for P4}
+
+Like any PET device, PETALO will need a deep study to understand the  
+degradation processes that affect the final determination of the images. There are a number of them which will be of capital importance such as random coincidences, order of the sequence of the interactions, missing projection data, continuous energy spectrum of the gamma prompts, etc. These effects will be accurately modelled in order to minimise the negative impact in the imaging.
+
+Most of these processes can be compensated at reconstruction time by computing a system matrix (SM) modelling the whole device. Other corrections can be added at hoc. However, the excellent timing and energy resolution expected for PETALO will likely a very well behaved SM. 
+
+In summary, a dedicated image reconstruction software package for PEP will be developed. It should be flexible enough to accommodate many possible configurations. The device will be modelled with high degree of precision for achieving final images of the highest possible quality. 
+
+According to the schedule PEP will be available for imaging studies during the last six months of the project, after a full characterisation of its operational parameters (energy resolution, spatial resolution, CRT). The detector will then be operated as an imaging device using sophisticated phantoms and (if certified on time) human brain data from volunteers in order to fully  develop the imaging software.  
+
+
+
+%Currently, for commercially available crystal-based PET scanners the best coincidence resolving time (CRT) is currently   500-600 ps FWHM. As an example, the Philips Gemini TF made of LYSO and used for diagnostic PET shows 585 ps FWHM CRT\footnote{Surti S, Kuhn A, Werner M E, Perkins A E, Kolthammer J, and Karp J S (2007): Performance of
+%Philipps Gemini TF PET/CT Scanner with Special Consideration for Its Time-of-Flight Imaging
+%Capabilities. J Nucl Med 48 471-48}.
+%Recently, a new generation of PET scanners based on silicon photomultiplier provides
+%CRTs of 400 ps, as referenced in manufacturer data sheets (Philips Vereos PET/CT and
+%GE Signa PET/MR).
+
+
+%
+%\paragraph{Integration of imaging biomarkers in the workflow}
+%
+%The NMR-PET system will include the automated generation of imaging biomarkers derived from the acquisition profiles and sequences considered, like Pharmacokinetics imaging biomarkers extracted from MR Perfusion acquisitions (like vascular permeability, Ktrans; extraction rate, Kep; extra-vascular extra-cellular volume, ve) and also MR Diffusion (like apparent diffusion coefficient, ADC; and diffusion coefficient, D; pseudo-diffusion or perfusion coefficient, D*; vascular fraction, f). The automated quantification of the Metabolic Activity through the standardized uptake value (SUV) in the clusters with higher SUV values will be also developed\footnote{Ralf S. Eschbach , Wolfgang P. Fendler , Philipp M. Kazmierczak,, Marcus Hacker, Axel Rominger , Janette Carlsen , Heidrun Hirner-Eppeneder , Jessica Schuster , Matthias Moser , Lukas Havla , Moritz J. Schneider , Michael Ingrisch , Lukas Spaeth , Maximilian F. Reiser , Konstantin Nikolaou , Clemens C. Cyran Correlation of Perfusion MRI and 18F-FDG PET Imaging Biomarkers for Monitoring Regorafenib Therapy in Experimental Colon Carcinomas with Immunohistochemical Validation. PLoS One. 2015; 10(2): e0115543.}.
+%
+%\paragraph{Testing the compatibility of P4 with NMR}
+%According to the schedule of the DET subproject, P4 will be built and characterised by Q4-16. In Q1-217 the detector will be installed inside the gantry of the NMR research apparatus available at the hospital La Fe (a 3T, 127Mhz apparatus with a 60 cm gantry). This is an essential test for the certification of PETALO as a fully compatible NMR apparatus. The compatibility requirements between NMR magnetic fields and P4 will be evaluated studying the influence of the magnetic field on the building materials, the sensors and ---as soon as available--- the (first stage) PETALO APE. The tests will run  through Q1-2017 and will include studies of combined PET and NMR data. 
+%
+\subsubsection*{Definition of clinical requirements and certification of PEP}
+The IMG group is in charge to define the quality and safety requirements to be used in a clinical environment, so that the system can be certified for operation at  the hospital La Fe.
+
+
+%\paragraph{Acquisition of images with combined MR and PET data}
+%In 2018, P4 will operate inside the NMR gantry. 
+%The software for registration and fusion of the MR and PET images will be developed considering different techniques (segmentation, atlas-based) for the generation of attenuation maps in the PET images correction. Operation in the presence of magnetic field will run from Q1 to Q4 2018. The combination of the excellent energy and time resolution, TOF capabilities and NMR combined images should provide a strong demonstration of the strength of the technology. 
+%
